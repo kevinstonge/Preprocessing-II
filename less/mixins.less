@@ -7,5 +7,17 @@
     flex-direction: @direction;
     justify-content: @justify-content;
 }
+.bigButton(@fontSize) {
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 100%;
+    font-size: @fontSize;
+    background-color: aqua;
+    color: white;
+    text-align: center;
+}
 @tablet: ~"(max-width: 500px)";
 @desktop: ~"(max-width: 800px)";
+
+// stretch: Create an animation mixin using parametric mixins
+

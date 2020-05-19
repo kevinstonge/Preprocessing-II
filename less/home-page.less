@@ -72,6 +72,9 @@
 
   .content-destination {
     width: 75%;
+    @media @tablet {
+      width: 100%;
+    }
     margin: 0 auto 30px;
 
     img {
@@ -82,12 +85,24 @@
   .content-pick {
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
-    display: flex;
-    justify-content: space-between;
+    .flex(row,space-between);
+    @media @tablet {
+      .flex(column,center);
+      align-items: center;
+    }
 
     .destination {
       width: 30%;
+      @media @tablet {
+        width: 80%;
+      }
       margin-bottom: 30px;
+    }
+    .btn {
+      .bigButton(16px);
+      @media @tablet {
+        .bigButton(24px);
+      }
     }
   }
 }// home
