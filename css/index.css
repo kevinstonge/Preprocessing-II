@@ -330,9 +330,10 @@ img {
   padding: 1rem;
   width: 100%;
   font-size: 16px;
-  background-color: aqua;
+  background-color: teal;
   color: white;
   text-align: center;
+  cursor: pointer;
 }
 @media (max-width: 500px) {
   .home .content-pick .btn {
@@ -340,8 +341,25 @@ img {
     padding: 1rem;
     width: 100%;
     font-size: 24px;
-    background-color: aqua;
+    background-color: teal;
     color: white;
     text-align: center;
+    cursor: pointer;
+  }
+}
+.home .content-pick .btn:hover {
+  animation-name: hoverGlow;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes hoverGlow {
+  0% {
+    box-shadow: 0 0 0 white inset;
+  }
+  50% {
+    box-shadow: 0 0 1em white inset;
+  }
+  100% {
+    box-shadow: 0 0 0 white inset;
   }
 }

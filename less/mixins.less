@@ -12,12 +12,24 @@
     padding: 1rem;
     width: 100%;
     font-size: @fontSize;
-    background-color: aqua;
+    background-color: teal;
     color: white;
     text-align: center;
+    cursor: pointer;
 }
 @tablet: ~"(max-width: 500px)";
 @desktop: ~"(max-width: 800px)";
 
 // stretch: Create an animation mixin using parametric mixins
-
+.hoverGlow(@duration,@size,@color) {
+    
+        @keyframes hoverGlow {
+            0% { box-shadow: 0 0 0 @color inset; }
+            50% { box-shadow: 0 0 @size @color inset; }
+            100% { box-shadow: 0 0 0 @color inset; }
+        }
+        animation-name: hoverGlow;
+        animation-duration: @duration;
+        animation-iteration-count: infinite;
+    
+}
