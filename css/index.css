@@ -1,3 +1,6 @@
+.dashedBorder {
+  border-bottom: 2px dashed #C0C0C0;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -168,6 +171,17 @@ img {
   width: 100%;
   margin: 0 auto;
 }
+.home > .header-section > nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.home > .header-section > nav > a {
+  text-decoration: none;
+  padding: 1rem;
+  color: black;
+  font-size: 1.5rem;
+}
 .footer {
   width: 100%;
   border-top: 2px dashed silver;
@@ -179,11 +193,35 @@ img {
   font-size: 1.6rem;
   padding: 20px;
 }
+.home .header-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 2px dashed #C0C0C0;
+}
+@media (max-width: 500px) {
+  .home .header-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.home .header-section > h1 {
+  text-align: left;
+}
+@media (max-width: 500px) {
+  .home .header-section > h1 {
+    text-align: center;
+  }
+}
 .home .content-section {
-  margin: 30px 0;
+  margin: 0 0 30px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+.home .content-section > img {
+  margin-bottom: 30px;
 }
 .home .content-section .text-content {
   width: 48%;
