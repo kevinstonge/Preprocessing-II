@@ -179,8 +179,14 @@ img {
 .home > .nav-section > nav > a {
   text-decoration: none;
   padding: 1rem;
+  padding-bottom: 0;
+  margin-bottom: 1rem;
   color: black;
   font-size: 1.5rem;
+}
+.home > .nav-section > nav > a:hover {
+  border-bottom: 1px solid black;
+  border-radius: 100%;
 }
 .footer {
   width: 100%;
