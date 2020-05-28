@@ -1,45 +1,85 @@
 .home {
-
+  .nav-section {
+    .flex(row,space-between);
+    @media @tablet {
+      .flex(column,center);
+    }
+    .dashedBorder;
+    >h1 {
+      text-align: left;
+      @media @tablet {
+        text-align: center;
+      }
+    }
+  }
   .content-section {
-    margin: 30px 0;
-    display: flex;
+    margin: 0 0 30px 0;
+    .flex(row,space-between);
     flex-wrap: wrap;
-    justify-content: space-between;
-
-   
-    
+    @media @tablet {
+      .flex(column,center);
+    }
+    >header {
+      >img { 
+        width: 100%;
+        min-height: 200px;
+        margin-bottom: 30px; 
+        object-fit: cover;
+      }
+      .dashedBorder;
+    }
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @tablet {
+        width: 100%;
+        padding-right: 0;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media @tablet {
+        >img { width: 100%; }
+        width: 100%;
+        padding-left: 0;
+      }
 
       img {
         border-radius: 10px;
       }
     }
   }
-
   .inverse-content {
+    @media @tablet {
+      .flex(column-reverse,space-between);
+    }
     padding-bottom: 30px;
-    border-bottom: 2px dashed @navigation-border;
+    .dashedBorder;
 
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+      @media @tablet {
+        padding-left: 0;
+      }
     }
 
     .img-content {
       padding-right: 1%;
+      @media @tablet {
+        padding-right: 0;
+      }
       padding-left: 0;
     }
   }
 
   .content-destination {
     width: 75%;
+    @media @tablet {
+      width: 100%;
+    }
     margin: 0 auto 30px;
 
     img {
@@ -50,12 +90,27 @@
   .content-pick {
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
-    display: flex;
-    justify-content: space-between;
+    .flex(row,space-between);
+    @media @tablet {
+      .flex(column,center);
+      align-items: center;
+    }
 
     .destination {
       width: 30%;
+      @media @tablet {
+        width: 80%;
+      }
       margin-bottom: 30px;
+    }
+    .btn {
+      .bigButton(16px);
+      @media @tablet {
+        .bigButton(24px);
+      }
+      &:hover {
+        .hoverGlow(2s,1em,white);
+      }
     }
   }
 }// home
